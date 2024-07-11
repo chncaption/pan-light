@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 as base
+FROM ubuntu:xenial-20201014 as base
 
 ENV USER user
 ENV HOME /home/$USER
@@ -14,7 +14,7 @@ RUN find /opt/Qt/5.9.6 -type f -name "*.debug" -delete
 RUN find /opt/Qt/Docs -type f ! -name "*.index" -delete
 
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20201014
 LABEL maintainer therecipe
 
 ENV USER user
