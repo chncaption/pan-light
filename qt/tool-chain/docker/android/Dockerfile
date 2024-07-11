@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 as base
+FROM ubuntu:xenial-20201014 as base
 
 ENV USER user
 ENV HOME /home/$USER
@@ -53,7 +53,7 @@ RUN NDK=android-ndk-r18b-linux-x86_64.zip && curl -sL --retry 10 --retry-delay 6
 #RUN find $HOME/openssl-1.1.1a-* -type f -exec llvm-strip --strip-all {} \;
 
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20201014
 LABEL maintainer therecipe
 
 ENV USER user
