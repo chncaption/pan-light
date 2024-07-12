@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 LABEL maintainer therecipe
 
 RUN apt-get -qq update && apt-get --no-install-recommends -qq -y install ca-certificates git
