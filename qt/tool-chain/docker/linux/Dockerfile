@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 as base
+FROM ubuntu:xenial-20210416 as base
 
 ENV USER user
 ENV HOME /home/$USER
@@ -15,7 +15,7 @@ RUN find /opt/Qt/Docs -type f ! -name "*.index" -delete
 RUN find /opt/Qt/5.12.0/gcc_64 -type f ! -name "*.a" -name "lib*" -exec strip -s {} \;
 
 
-FROM ubuntu:16.04
+FROM ubuntu:xenial-20210416
 LABEL maintainer therecipe
 
 ENV USER user
